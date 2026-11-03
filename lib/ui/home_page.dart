@@ -33,6 +33,7 @@ class HomePage extends StatelessWidget {
       ),
       body: CustomScrollView(
         slivers: [
+          // Streak Banner Challenge
           SliverToBoxAdapter(
             child: Container(
               margin: const EdgeInsets.all(16.0),
@@ -96,6 +97,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
+
+          // Progress Overview Card
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.horizontal(16.0),
@@ -140,6 +143,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
+
+          // Task List Header
           const SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
@@ -152,6 +157,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
+
+          // Tasks List
           appState.tasks.isEmpty
               ? SliverFillRemaining(
                   child: Center(
